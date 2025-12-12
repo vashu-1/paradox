@@ -15,6 +15,10 @@ const LoginPage = () => {
 
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
+        options: {
+          redirectTo:
+            'https://ai-recruiter-voice-agent-jenl.vercel.app/auth/callback',
+        },
       });
 
       if (error) throw error;

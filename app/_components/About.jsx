@@ -12,9 +12,8 @@ const About = () => {
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: 'Team Competition',
-      description:
-        'Collaborate with your team or compete solo in this thrilling intellectual adventure.',
+      title: 'Solo Competition',
+      description: 'Compete solo in this thrilling intellectual adventure.',
     },
     {
       icon: <Trophy className="w-8 h-8" />,
@@ -94,10 +93,10 @@ const About = () => {
             </p>
             <p className="text-white/80 text-lg leading-relaxed mb-4">
               Each round presents increasingly complex challenges that require
-              innovative thinking and collaborative problem-solving. Whether
-              you're a puzzle enthusiast, a logic lover, or simply seeking an
-              unforgettable experience, The Trigger welcomes all who dare to
-              enter.
+              innovative thinking and sharp individual problem-solving skills.
+              Whether you're a puzzle enthusiast, a logic lover, or simply
+              seeking an unforgettable experience, The Trigger welcomes all who
+              dare to enter.
             </p>
             <p className="text-white/80 text-lg leading-relaxed">
               Join us on{' '}

@@ -19,15 +19,15 @@ const EventFlow = () => {
       subtitle: 'Crack the Code',
       description:
         'Begin your journey with mind-bending puzzles and logical challenges. Test your pattern recognition, critical thinking, and problem-solving abilities with a variety of brain teasers.',
-      duration: '30 minutes',
-      participants: 'All Teams',
+      duration: '5 minutes',
+      participants: 'All Participants',
       icon: <Zap className="w-12 h-12" />,
       color: 'from-purple-600 to-purple-800',
       features: [
         'Logic puzzles and riddles',
         'Pattern recognition challenges',
-        'Mathematical brain teasers',
-        'Top teams advance to Round 2',
+        'Word association puzzles',
+        'Top performers advance to next round',
       ],
     },
     {
@@ -37,7 +37,7 @@ const EventFlow = () => {
       description:
         'Navigate through complex paradoxes and advanced logical challenges. Solve intricate puzzles that will push your reasoning skills to the limit.',
       duration: '45 minutes',
-      participants: 'Shortlisted Teams',
+      participants: 'Shortlisted Participants',
       icon: <Target className="w-12 h-12" />,
       color: 'from-purple-700 to-purple-900',
       features: [
@@ -59,7 +59,7 @@ const EventFlow = () => {
       color: 'from-purple-800 to-purple-950',
       features: [
         'Industry-relevant case studies',
-        'Team collaboration required',
+        'Individual solution development',
         'Solution presentation & defense',
         'Judged on innovation, feasibility & impact',
       ],

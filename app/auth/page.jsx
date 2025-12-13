@@ -15,9 +15,6 @@ const LoginPage = () => {
 
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
-        options: {
-          redirectTo: 'https://paradox-steel.vercel.app/auth/callback',
-        },
       });
 
       if (error) throw error;

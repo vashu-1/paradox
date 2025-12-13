@@ -9,23 +9,64 @@ export default function AuthCallback() {
   useEffect(() => {
     const handleCallback = async () => {
       try {
-        // Get the session from the URL hash
-        const {
-          data: { session },
-          error,
-        } = await supabase.auth.getSession();
+        // Check if we have the auth code in the URL
+        const hashParams = new URLSearchParams(
+          window.location.hash.substring(1)
+        );
+        const searchParams = new URLSearchParams(window.location.search);
 
-        if (error) {
-          console.error('Auth callback error:', error);
-          router.push('/auth?error=callback_failed');
-          return;
+        const code = searchParams.get('code');
+        const access_token = hashParams.get('access_token');
+        const refresh_token = hashParams.get('refresh_token');
+
+        console.log('Auth callback triggered', { code, access_token });
+
+        if (code) {
+          // Exchange code for session (new Supabase PKCE flow)
+          const { data, error } = await supabase.auth.exchangeCodeForSession(
+            code
+          );
+
+          if (error) {
+            console.error('Code exchange error:', error);
+            router.push('/auth?error=' + encodeURIComponent(error.message));
+            return;
+          }
+
+          if (data.session) {
+            console.log('Session obtained, redirecting to home');
+            router.push('/');
+            return;
+          }
+        } else if (access_token) {
+          // Old hash-based flow (fallback)
+          const { data, error } = await supabase.auth.setSession({
+            access_token,
+            refresh_token: refresh_token || '',
+          });
+
+          if (error) {
+            console.error('Set session error:', error);
+            router.push('/auth?error=' + encodeURIComponent(error.message));
+            return;
+          }
+
+          if (data.session) {
+            console.log('Session set, redirecting to home');
+            router.push('/');
+            return;
+          }
         }
 
+        // No code or token found, check existing session
+        const {
+          data: { session },
+        } = await supabase.auth.getSession();
+
         if (session) {
-          // Successfully authenticated, redirect to home or event page
           router.push('/');
         } else {
-          // No session found, redirect back to auth
+          console.log('No session found, redirecting to auth');
           router.push('/auth');
         }
       } catch (error) {

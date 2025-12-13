@@ -5,8 +5,21 @@ export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if device is mobile/small screen
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    // Don't show custom cursor on mobile
+    if (isMobile) {
+      return () => window.removeEventListener('resize', checkMobile);
+    }
     const updateCursor = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -46,6 +59,11 @@ export default function CustomCursor() {
       document.removeEventListener('mouseenter', handleMouseEnter);
     };
   }, []);
+
+  // Don't render custom cursor on mobile/small screens
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <>

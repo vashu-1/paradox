@@ -15,8 +15,8 @@ const EventFlow = () => {
   const rounds = [
     {
       number: 1,
-      title: 'Puzzle Round',
-      subtitle: 'Crack the Code',
+      title: 'Round1: The Trigger',
+
       description:
         'Begin your journey with mind-bending puzzles and logical challenges. Test your pattern recognition, critical thinking, and problem-solving abilities with a variety of brain teasers.',
       duration: '5 minutes',
@@ -24,19 +24,18 @@ const EventFlow = () => {
       icon: <Zap className="w-12 h-12" />,
       color: 'from-purple-600 to-purple-800',
       features: [
-        'Logic puzzles and riddles',
-        'Pattern recognition challenges',
+        'Logic riddles with option',
+
         'Word association puzzles',
         'Top performers advance to next round',
       ],
     },
     {
       number: 2,
-      title: 'Advanced Puzzle Round',
-      subtitle: 'Enter the Paradox',
+      title: 'The Hidden Transmission',
       description:
         'Navigate through complex paradoxes and advanced logical challenges. Solve intricate puzzles that will push your reasoning skills to the limit.',
-      duration: '45 minutes',
+      duration: '15 minutes',
       participants: 'Shortlisted Participants',
       icon: <Target className="w-12 h-12" />,
       color: 'from-purple-700 to-purple-900',
@@ -139,14 +138,10 @@ const EventFlow = () => {
                       {/* Details */}
                       <div className="flex-1">
                         <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                          <div>
-                            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-1">
-                              {round.title}
-                            </h3>
-                            <p className="text-purple-300 font-semibold">
-                              {round.subtitle}
-                            </p>
-                          </div>
+                          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-1">
+                            {round.title}
+                          </h3>
+
                           <div className="flex gap-3">
                             <div className="px-3 py-1 bg-purple-900/50 border border-purple-500/30 rounded-full flex items-center gap-2">
                               <Clock className="w-4 h-4 text-purple-400" />

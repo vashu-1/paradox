@@ -72,10 +72,16 @@ const About = () => {
           </h2>
 
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            The Trigger: Enter the Paradox is an extraordinary intellectual
-            challenge where participants dive into a world of mind-bending
-            puzzles, logical paradoxes, and thrilling mysteries. Are you ready
-            to challenge reality itself?
+            Welcome to Operation Paradox, an electrifying online treasure hunt
+            where logic collides with illusion and every answer raises a new
+            question. This multi-stage digital chase will challenge your
+            reasoning, creativity, and problem-solving instincts as you navigate
+            through riddles, hidden clues, and coded trails spread across the
+            virtual world. Each solved clue opens the door to another paradox —
+            deeper, trickier, and more mind-twisting than the last. Only those
+            who can think beyond reason will uncover the truth behind the
+            operation and claim the title of Master of Paradox. Are you ready to
+            question everything you think you know?
           </p>
         </div>
 

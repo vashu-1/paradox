@@ -63,16 +63,16 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 mt-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Title */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-6">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
-            THE TRIGGER
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+          <span className="text-transparent uppercase bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
+            Operation Paradox
           </span>
         </h1>
 
         {/* Subtitle */}
-        <div className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-8">
+        <div className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-purple-400">
-            ENTER THE PARADOX
+            The Hunt Beyond Logic
           </span>
         </div>
 

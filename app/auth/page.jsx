@@ -13,10 +13,17 @@ const LoginPage = () => {
       setLoading(true);
       setError(null);
 
+      // Get the correct redirect URL based on environment
+      const redirectUrl = process.env.NEXT_PUBLIC_SITE_URL
+        ? `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`
+        : `${window.location.origin}/auth/callback`;
+
+      console.log('Redirecting to:', redirectUrl);
+
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: 'https://paradox-steel.vercel.app/auth/callback',
+          redirectTo: redirectUrl,
         },
       });
 

@@ -67,7 +67,7 @@ const About = () => {
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
-              What is THE TRIGGER?
+              What is CipherX?
             </span>
           </h2>
 

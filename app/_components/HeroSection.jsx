@@ -64,7 +64,7 @@ const HeroSection = () => {
       <div className="relative z-10 mt-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Title */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-          <span className="text-transparent uppercase bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
             CipherX
           </span>
         </h1>

@@ -15,7 +15,7 @@ const EventFlow = () => {
   const rounds = [
     {
       number: 1,
-      title: 'Round1: The Trigger',
+      title: 'Round 1: The Trigger',
 
       description:
         'Begin your journey with mind-bending riddles and logical challenges. Test your pattern recognition, critical thinking, and problem-solving abilities with a variety of brain teasers.',
@@ -32,7 +32,7 @@ const EventFlow = () => {
     },
     {
       number: 2,
-      title: 'Round2: The Hidden Transmission',
+      title: 'Round 2: The Hidden Transmission',
       description:
         'Agents who make it through will receive a classified email containing encrypted data, secret links, and hidden coordinates. Clues may lurk in attachments, metadata, or URLs — you’ll need keen eyes and sharper minds to decode the digital maze. Only the best codebreakers will find the real message buried in the noise and move on to the final showdown. ',
       duration: '15 minutes',
@@ -48,7 +48,7 @@ const EventFlow = () => {
     },
     {
       number: 3,
-      title: 'Round3: The Final Breach',
+      title: 'Round 3: The Final Breach',
       subtitle: 'Real-World Application',
       description:
         'Present innovative solutions to complex real-world problems. Showcase your analytical thinking, creativity, and presentation skills in this final challenge.',

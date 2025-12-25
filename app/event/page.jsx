@@ -174,7 +174,7 @@ const page = () => {
                     Time Limit: 5 Minutes
                   </h3>
                   <p className="text-xs sm:text-sm text-purple-300">
-                    You have exactly 5 minutes to complete all 10 questions. The
+                    You have exactly 5 minutes to complete all 15 questions. The
                     quiz will auto-submit when time runs out.
                   </p>
                 </div>
@@ -184,7 +184,7 @@ const page = () => {
                 <Award className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-sm sm:text-base font-semibold text-white mb-1">
-                    Total Questions: 10
+                    Total Questions: 15
                   </h3>
                   <p className="text-xs sm:text-sm text-purple-300">
                     All questions are interconnected puzzles. Each answer leads

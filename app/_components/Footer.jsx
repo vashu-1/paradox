@@ -137,7 +137,7 @@ const Footer = () => {
                   href="mailto:modelclubbits2k23@gmail.com"
                   className="text-white/60 hover:text-purple-400 transition-colors"
                 >
-                  modelclubbits2k23@gmail.com
+                  modelclub.web@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm">

@@ -18,7 +18,7 @@ const EventFlow = () => {
       title: 'Round1: The Trigger',
 
       description:
-        'Begin your journey with mind-bending puzzles and logical challenges. Test your pattern recognition, critical thinking, and problem-solving abilities with a variety of brain teasers.',
+        'Begin your journey with mind-bending riddles and logical challenges. Test your pattern recognition, critical thinking, and problem-solving abilities with a variety of brain teasers.',
       duration: '5 minutes',
       participants: 'All Participants',
       icon: <Zap className="w-12 h-12" />,
@@ -27,28 +27,28 @@ const EventFlow = () => {
         'Logic riddles with option',
 
         'Word association puzzles',
-        'Top performers advance to next round',
+        'Top 30 performers advance to next round',
       ],
     },
     {
       number: 2,
-      title: 'The Hidden Transmission',
+      title: 'Round2: The Hidden Transmission',
       description:
-        'Navigate through complex paradoxes and advanced logical challenges. Solve intricate puzzles that will push your reasoning skills to the limit.',
+        'Agents who make it through will receive a classified email containing encrypted data, secret links, and hidden coordinates. Clues may lurk in attachments, metadata, or URLs — you’ll need keen eyes and sharper minds to decode the digital maze. Only the best codebreakers will find the real message buried in the noise and move on to the final showdown. ',
       duration: '15 minutes',
       participants: 'Shortlisted Participants',
       icon: <Target className="w-12 h-12" />,
       color: 'from-purple-700 to-purple-900',
       features: [
-        'Paradox-based challenges',
+        'logic-based challenges',
         'Multi-layered logic puzzles',
         'Time-sensitive problem solving',
-        'Best performers proceed to Final Round',
+        'Best 10 performers proceed to Final Round',
       ],
     },
     {
       number: 3,
-      title: 'Case Study Round',
+      title: 'Round3: The Final Breach',
       subtitle: 'Real-World Application',
       description:
         'Present innovative solutions to complex real-world problems. Showcase your analytical thinking, creativity, and presentation skills in this final challenge.',
@@ -59,8 +59,8 @@ const EventFlow = () => {
       features: [
         'Industry-relevant case studies',
         'Individual solution development',
-        'Solution presentation & defense',
-        'Judged on innovation, feasibility & impact',
+        'The top 3 participants will be declared the final winners',
+        'the top contestant will earn the title of Master of Cipher.',
       ],
     },
   ];
@@ -193,7 +193,7 @@ const EventFlow = () => {
             </h3>
             <p className="text-white/80 text-lg leading-relaxed mb-6">
               Top 3 teams will be awarded with exciting prizes, certificates,
-              and the glory of conquering "The Trigger: Enter the Paradox"!
+              and the glory of conquering "Master of Cipher"!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="px-6 py-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">

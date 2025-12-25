@@ -9,6 +9,7 @@ import {
   Linkedin,
   Globe,
   Heart,
+  Facebook,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -33,8 +34,8 @@ const Footer = () => {
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">THE TRIGGER</h3>
-                <p className="text-purple-400 text-xs">Enter the Paradox</p>
+                <h3 className="text-xl font-bold text-white">CipherX</h3>
+                <p className="text-purple-400 text-xs">The Hunt Beyond Logic</p>
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
@@ -43,7 +44,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/modelclubbit?igsh=c24zcHFzbWVmdnln"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-purple-950/50 border border-purple-500/30 rounded-lg flex items-center justify-center hover:bg-purple-900/50 hover:border-purple-500/50 transition-all"
@@ -51,12 +52,20 @@ const Footer = () => {
                 <Instagram className="w-4 h-4 text-purple-300" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/modelclub-bitsindri/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-purple-950/50 border border-purple-500/30 rounded-lg flex items-center justify-center hover:bg-purple-900/50 hover:border-purple-500/50 transition-all"
               >
                 <Linkedin className="w-4 h-4 text-purple-300" />
+              </a>
+              <a
+                href="https://www.facebook.com/share/1EmbvoVpJh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-purple-950/50 border border-purple-500/30 rounded-lg flex items-center justify-center hover:bg-purple-900/50 hover:border-purple-500/50 transition-all"
+              >
+                <Facebook className="w-4 h-4 text-purple-300" />
               </a>
               <a
                 href="https://modelclubbits.com"
@@ -125,10 +134,10 @@ const Footer = () => {
               <li className="flex items-start gap-2 text-sm">
                 <Mail className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
                 <a
-                  href="mailto:modelclub.web@gmail.com"
+                  href="mailto:modelclubbits2k23@gmail.com"
                   className="text-white/60 hover:text-purple-400 transition-colors"
                 >
-                  modelclub.web@gmail.com
+                  modelclubbits2k23@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm">
@@ -168,7 +177,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <p className="text-white/40 text-sm text-center md:text-left">
-              © {currentYear} The Trigger: Enter the Paradox. All rights
+              © {currentYear} CipherX: The Hunt Beyond Logic. All rights
               reserved.
             </p>
 
@@ -190,13 +199,13 @@ const Footer = () => {
             {/* Links */}
             <div className="flex gap-4 text-sm">
               <Link
-                href="/privacy"
+                href="/"
                 className="text-white/40 hover:text-purple-400 transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="/terms"
+                href="/"
                 className="text-white/40 hover:text-purple-400 transition-colors"
               >
                 Terms of Service

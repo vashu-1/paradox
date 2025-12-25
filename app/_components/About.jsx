@@ -8,7 +8,7 @@ const About = () => {
       icon: <Zap className="w-8 h-8" />,
       title: 'Mind-Bending Challenges',
       description:
-        'Solve paradoxes and riddles that will test your logic and creativity to the limit.',
+        'Solve riddles that will test your logic and creativity to the limit.',
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -72,16 +72,20 @@ const About = () => {
           </h2>
 
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Welcome to Operation Paradox, an electrifying online treasure hunt
-            where logic collides with illusion and every answer raises a new
-            question. This multi-stage digital chase will challenge your
-            reasoning, creativity, and problem-solving instincts as you navigate
-            through riddles, hidden clues, and coded trails spread across the
-            virtual world. Each solved clue opens the door to another paradox —
-            deeper, trickier, and more mind-twisting than the last. Only those
-            who can think beyond reason will uncover the truth behind the
-            operation and claim the title of Master of Paradox. Are you ready to
-            question everything you think you know?
+            Welcome to CipherX, an online treasure hunt where you solve clues,
+            crack codes, and follow hidden trails to reach the final answer.
+            This is a solo participation event, so every puzzle you solve and
+            every step you take depends entirely on your own skills and
+            instincts. Across three rounds, you will face fun, tricky, and
+            carefully designed puzzles that test your thinking, creativity, and
+            problem-solving abilities. Each clue you solve will lead you to the
+            next one, becoming a bit more challenging as you progress. Along the
+            way, you may discover hidden patterns, digital secrets, and
+            unexpected twists that will push you to think differently. Only the
+            best codebreakers will reach the final round and earn the title of
+            The Master of Cipher. With every step, you move closer to uncovering
+            the mystery that lies at the core of CipherX. Are you ready to begin
+            the hunt and prove your skills? Let the adventure begin!
           </p>
         </div>
 
@@ -89,27 +93,25 @@ const About = () => {
         <div className="max-w-4xl mx-auto mb-20">
           <div className="bg-gradient-to-br from-purple-950/40 to-black/40 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-8 lg:p-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 mb-6">
-              The Ultimate Mental Challenge
+              The Trigger
             </h3>
             <p className="text-white/80 text-lg leading-relaxed mb-4">
-              Step into a dimension where logic defies itself and reality bends
-              at your command. The Trigger is not just an event—it's a journey
-              through paradoxes that will test your intellect, creativity, and
-              determination.
+              The operation begins with a rapid series of advanced riddles,
+              logical traps, and pattern-based challenges. Every answer unlocks
+              a piece of the bigger picture — but beware, not every clue is what
+              it seems. Top performers will advance to the next phase of the
+              mission — where mystery meets misdirection.
             </p>
             <p className="text-white/80 text-lg leading-relaxed mb-4">
-              Each round presents increasingly complex challenges that require
-              innovative thinking and sharp individual problem-solving skills.
-              Whether you're a puzzle enthusiast, a logic lover, or simply
-              seeking an unforgettable experience, The Trigger welcomes all who
-              dare to enter.
+              Only Top 30 individuals will move to the second round of the
+              event.
             </p>
             <p className="text-white/80 text-lg leading-relaxed">
               Join us on{' '}
               <span className="text-purple-400 font-semibold">
-                December 13, 2025
+                December 27, 2025
               </span>
-              , and prove that you have what it takes to conquer the paradox and
+              , and prove that you have what it takes to conquer the trigger and
               emerge victorious!
             </p>
           </div>

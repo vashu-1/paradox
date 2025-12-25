@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import RegisterPage from './_components/register';
 import QuestionContainer from './_components/questions';
+import CountdownTimer from './_components/CountdownTimer';
 import { Progress } from '@/components/ui/progress';
 import { useUser } from '@/app/provider';
 import { AlertCircle, Clock, Award, X } from 'lucide-react';
@@ -10,8 +11,20 @@ const page = () => {
   const [step, setStep] = useState(1);
   const [registrationData, setRegistrationData] = useState(null);
   const [showInstructions, setShowInstructions] = useState(false);
+  const [isTimerExpired, setIsTimerExpired] = useState(false);
+  const [isEventClosed, setIsEventClosed] = useState(false);
   const context = useUser();
   const user = context?.user || null;
+
+  const targetDate = '2025-12-26 00:00:00';
+  const eventDurationHours = 1; // Event will be open for 2 hours after start
+  const handleTimerEnd = () => {
+    setIsTimerExpired(true);
+  };
+
+  const handleEventExpired = () => {
+    setIsEventClosed(true);
+  };
 
   const handleRegistrationSubmit = (data) => {
     setRegistrationData(data);
@@ -26,6 +39,18 @@ const page = () => {
   const nextPage = () => {
     setShowInstructions(true);
   };
+
+  // Show timer if not expired or show closed message if event ended
+  if (!isTimerExpired || isEventClosed) {
+    return (
+      <CountdownTimer
+        targetDate={targetDate}
+        eventDurationHours={eventDurationHours}
+        onTimerEnd={handleTimerEnd}
+        onEventExpired={handleEventExpired}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-950 via-black to-purple-900">

@@ -25,7 +25,6 @@ const EventFlow = () => {
       color: 'from-purple-600 to-purple-800',
       features: [
         'Logic riddles with option',
-
         'Word association puzzles',
         'Top 30 performers advance to next round',
       ],
@@ -40,7 +39,7 @@ const EventFlow = () => {
       icon: <Target className="w-12 h-12" />,
       color: 'from-purple-700 to-purple-900',
       features: [
-        'logic-based challenges',
+        'Logic-based challenges',
         'Multi-layered logic puzzles',
         'Time-sensitive problem solving',
         'Best 10 performers proceed to Final Round',
@@ -60,7 +59,7 @@ const EventFlow = () => {
         'Industry-relevant case studies',
         'Individual solution development',
         'The top 3 participants will be declared the final winners',
-        'the top contestant will earn the title of Master of Cipher.',
+        'The top contestant will earn the title of Master of Cipher.',
       ],
     },
   ];

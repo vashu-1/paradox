@@ -3,7 +3,7 @@ const questions = [
     id: 1,
     question:
       'What comes once in a minute, twice in a moment, but never in a thousand years?',
-    options: ['The letter M', 'Time', 'Silence', 'The letter T'],
+    options: ['Time', 'Silence', 'The letter T', 'The letter M'],
     correctAnswer: 'The letter M',
   },
   {
@@ -23,7 +23,7 @@ const questions = [
   {
     id: 4,
     question: 'The more you take, the more you leave behind. What are they?',
-    options: ['Memories', 'Footsteps', 'Photographs', 'Breaths'],
+    options: ['Memories', 'Photographs', 'Footsteps', 'Breaths'],
     correctAnswer: 'Footsteps',
   },
   {
@@ -44,14 +44,14 @@ const questions = [
     id: 7,
     question:
       'The answer from Question 5 represents a month of the year. Which Indian festival is commonly celebrated in this month?',
-    options: ['Diwali', 'Holi', 'Raksha Bandhan', 'Dussehra'],
+    options: ['Diwali', 'Raksha Bandhan', 'Dussehra', 'Holi'],
     correctAnswer: 'Holi',
   },
   {
     id: 8,
     question:
       'I am always hungry and must be fed. The finger I touch will soon turn red. What am I?',
-    options: ['Fire', 'Blood', 'Vampire', 'Hunger'],
+    options: ['Blood', 'Vampire', 'Fire', 'Hunger'],
     correctAnswer: 'Fire',
   },
   {
@@ -77,7 +77,7 @@ const questions = [
   {
     id: 12,
     question: 'What begins with T, ends with T, and has T in it?',
-    options: ['Teapot', 'Text', 'Tent', 'Test'],
+    options: ['Text', 'Tent', 'Teapot', 'Test'],
     correctAnswer: 'Teapot',
   },
   {
@@ -91,7 +91,7 @@ const questions = [
     id: 14,
     question:
       'Take the first letter of the color from Question 11. Which programming language begins with this letter?',
-    options: ['Ruby', 'Python', 'Java', 'C'],
+    options: ['Python', 'Java', 'C', 'Ruby'],
     correctAnswer: 'Ruby',
   },
   {

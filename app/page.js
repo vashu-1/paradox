@@ -5,7 +5,7 @@ import EventFlow from './_components/EventFlow';
 import Footer from './_components/Footer';
 
 export const metadata = {
-  title: 'ChiperX: The Hunt Beyond Logic',
+  title: 'CipherX: The Hunt Beyond Logic',
   description: 'A Next.js app directory template with Tailwind CSS.',
 };
 

@@ -191,8 +191,8 @@ const EventFlow = () => {
               Grand Finale
             </h3>
             <p className="text-white/80 text-lg leading-relaxed mb-6">
-              Top 3 teams will be awarded with exciting prizes, certificates,
-              and the glory of conquering "Master of Cipher"!
+              Top 3 contestants will be awarded with exciting prizes,
+              certificates, and the glory of conquering "Master of Cipher"!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="px-6 py-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">

@@ -160,12 +160,12 @@ const Navbar = () => {
                 Event Flow
               </Link>
               <Link
-                href="/#prizes"
+                href="/#footer"
                 className="px-4 py-3 text-sm font-medium text-purple-200 hover:text-white hover:bg-purple-900/50 rounded-lg transition-all flex items-center gap-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <Trophy className="w-4 h-4" />
-                Prizes
+                Contact
               </Link>
               {user && (
                 <>
@@ -176,14 +176,7 @@ const Navbar = () => {
                   >
                     Contact
                   </Link>
-                  <Link
-                    href="/dashboard"
-                    className="px-4 py-3 text-sm font-medium text-purple-200 hover:text-white hover:bg-purple-900/50 rounded-lg transition-all flex items-center gap-2"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <User className="w-4 h-4" />
-                    Dashboard
-                  </Link>
+
                   <button
                     onClick={() => {
                       handleSignOut();

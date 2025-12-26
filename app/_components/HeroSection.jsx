@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 const HeroSection = () => {
-  // Event date and time - December 13, 2024
-  const eventDate = new Date('2025-12-27T20:00:00');
+  const eventDate = new Date('2025-12-27T18:00:00');
   const router = useRouter();
 
   const [timeLeft, setTimeLeft] = useState({

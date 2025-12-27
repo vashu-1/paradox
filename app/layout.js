@@ -16,9 +16,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'The Trigger: Enter the Paradox',
+  title: 'CipherX: The Hunt Beyond Logic',
   description:
     'An extraordinary intellectual challenge with mind-bending puzzles and thrilling mysteries.',
+  keywords: [
+    'sandhaan',
+    'model club',
+    'cipherx',
+    'BIT Sindri',
+    'model club event',
+    'Trigger',
+    'puzzle hunt',
+    'TOY 2026',
+  ],
 };
 
 export default function RootLayout({ children }) {

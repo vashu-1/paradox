@@ -7,6 +7,50 @@ import { Progress } from '@/components/ui/progress';
 import { useUser } from '@/app/provider';
 import { AlertCircle, Clock, Award, X } from 'lucide-react';
 
+const metadata = {
+  title:
+    'CipherX Round 1: The Trigger - Online Treasure Hunt | Model Club BIT Sindri',
+  description:
+    'Join CipherX Round 1: The Trigger - an intense 5-minute quiz with 20 mind-bending riddles and logical challenges. Top 30 performers advance to Round 2. Organized by Model Club, BIT Sindri on December 28, 2025.',
+  keywords: [
+    'CipherX',
+    'The Trigger',
+    'online treasure hunt',
+    'Model Club BIT Sindri',
+    'logic puzzles',
+    'brain teasers',
+    'riddles competition',
+    'problem solving contest',
+    'BIT Sindri events',
+    'college quiz competition',
+  ],
+  openGraph: {
+    title: 'CipherX: The Trigger - Round 1 Quiz Challenge',
+    description:
+      'Compete in CipherX Round 1 with 20 interconnected riddles! 5-minute time limit. Top 30 advance. Organized by Model Club, BIT Sindri.',
+    url: 'https://sandhaan-modelclub.in/event',
+    siteName: 'CipherX - The Hunt Beyond Logic',
+    type: 'website',
+    images: [
+      {
+        url: 'https://d33609liqwio9r.cloudfront.net/2025-12-27T10:06:36.086Z-WhatsApp_Image_2025-08-30_at_22.53.24_e64e50f8-removebg-preview.png',
+        width: 1200,
+        height: 630,
+        alt: 'CipherX - The Hunt Beyond Logic',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CipherX Round 1: The Trigger - Test Your Logic',
+    description:
+      'Join the ultimate treasure hunt! Solve 20 riddles in 5 minutes. Top 30 advance to Round 2. Model Club BIT Sindri.',
+    images: [
+      'https://d33609liqwio9r.cloudfront.net/2025-12-27T10:06:36.086Z-WhatsApp_Image_2025-08-30_at_22.53.24_e64e50f8-removebg-preview.png',
+    ],
+  },
+};
+
 const page = () => {
   const [step, setStep] = useState(1);
   const [registrationData, setRegistrationData] = useState(null);

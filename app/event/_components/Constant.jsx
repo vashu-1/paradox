@@ -101,6 +101,40 @@ const questions = [
     options: ['Shadow', 'Echo', 'Cloud', 'Spirit'],
     correctAnswer: 'Echo',
   },
+  {
+    id: 16,
+    question:
+      'If you have only one match and enter a dark room with a candle, a lamp, and a fireplace, what do you light first?',
+    options: ['Candle', 'Lamp', 'Fireplace', 'Match'],
+    correctAnswer: 'Match',
+  },
+  {
+    id: 17,
+    question: 'How many months have 28 days?',
+    options: ['1', '2', '11', '12'],
+    correctAnswer: '12',
+  },
+  {
+    id: 18,
+    question:
+      'I have no mass, yet I can bend. I travel fastest in emptiness but slow down when I enter something. Who am I?',
+    options: ['Sound', 'Heat', 'Light', 'Electricity'],
+    correctAnswer: 'Light',
+  },
+  {
+    id: 19,
+    question:
+      "I am not alive, but I grow. I don't have lungs, but I need air. I don't have a mouth, but water kills me. What am I?",
+    options: ['Cloud', 'Rust', 'Shadow', 'Fire'],
+    correctAnswer: 'Fire',
+  },
+  {
+    id: 20,
+    question:
+      "You measure my life in hours and I serve you by expiring. I die when I'm consumed. What am I?",
+    options: ['Battery', 'Time', 'Candle', 'Oxygen'],
+    correctAnswer: 'Candle',
+  },
 ];
 
 export default questions;

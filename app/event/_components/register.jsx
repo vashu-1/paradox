@@ -108,14 +108,6 @@ const RegisterPage = ({ GoToNext, onDataSubmit }) => {
       setError(err.message || 'An error occurred. Please try again.');
       setLoading(false);
     }
-
-    //       Registration Successful!
-    //     </h2>
-    //     <p className="text-purple-300">Redirecting you to home page...</p>
-    //   </div>
-    // </div>
-
-    // );
   };
 
   return (

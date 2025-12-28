@@ -165,7 +165,7 @@ const EventFlow = () => {
                           </div>
                         </div>
 
-                        <p className="text-white/70 text-lg mb-6 leading-relaxed">
+                        <p className="text-white/70 text-lg mb-6 leading-relaxed text-justify">
                           {round.description}
                         </p>
 

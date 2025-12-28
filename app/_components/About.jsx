@@ -71,7 +71,7 @@ const About = () => {
             </span>
           </h2>
 
-          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed text-justify">
             Welcome to CipherX, an online treasure hunt where you solve clues,
             crack codes, and follow hidden trails to reach the final answer.
             This is a solo participation event, so every puzzle you solve and
@@ -99,7 +99,7 @@ const About = () => {
             <h3 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 mb-6">
               The Trigger
             </h3>
-            <p className="text-white/80 text-lg leading-relaxed mb-4">
+            <p className="text-white/80 text-lg leading-relaxed mb-4 text-justify">
               The operation begins with a rapid series of advanced riddles,
               logical traps, and pattern-based challenges. Every answer unlocks
               a piece of the bigger picture — but beware, not every clue is what

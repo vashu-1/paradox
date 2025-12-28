@@ -109,7 +109,7 @@ const About = () => {
             <p className="text-white/80 text-lg leading-relaxed">
               Join us on{' '}
               <span className="text-purple-400 font-semibold">
-                December 27, 2025
+                December 29, 2025
               </span>
               , and prove that you have what it takes to conquer the trigger and
               emerge victorious!
@@ -143,17 +143,27 @@ const About = () => {
 
         {/* Timeline */}
         <div id="timeline" className="mt-20">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-200 to-purple-400">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-purple-500/30 bg-purple-950/30 backdrop-blur-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+              </span>
+              <span className="text-purple-300 text-sm font-medium">
+                Event Timeline
+              </span>
+            </div>
+
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
                 Timeline
               </span>
-            </h3>
+            </h2>
           </div>
 
           <div className="max-w-5xl mx-auto">
             <img
-              src="/timeline.jpg"
+              src="/timeline.png"
               alt="Event Timeline"
               className="w-full rounded-2xl border border-purple-500/30 shadow-2xl shadow-purple-900/50"
             />

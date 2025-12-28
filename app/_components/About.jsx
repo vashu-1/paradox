@@ -140,6 +140,25 @@ const About = () => {
             </div>
           ))}
         </div>
+
+        {/* Timeline */}
+        <div id="timeline" className="mt-20">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-200 to-purple-400">
+                Timeline
+              </span>
+            </h3>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <img
+              src="/timeline.jpg"
+              alt="Event Timeline"
+              className="w-full rounded-2xl border border-purple-500/30 shadow-2xl shadow-purple-900/50"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

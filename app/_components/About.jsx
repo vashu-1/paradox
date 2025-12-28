@@ -178,7 +178,7 @@ const About = () => {
             <img
               src="/timeline.png"
               alt="Event Timeline"
-              className="w-full h-[90vh] object-contain rounded-2xl border border-purple-500/30 shadow-2xl shadow-purple-900/50 hover:scale-105 transition-transform duration-300"
+              className="w-full h-[90vh] object-contain rounded-2xl border border-purple-500/30 shadow-lg shadow-purple-900/50 hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>

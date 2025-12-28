@@ -110,7 +110,7 @@ const About = () => {
               Only Top 30 individuals will move to the second round of the
               event.
             </p>
-            <p className="text-white/80 text-lg leading-relaxed">
+            <p className="text-white/80 text-lg leading-relaxed text-justify">
               Join us on{' '}
               <span className="text-purple-400 font-semibold">
                 December 29, 2025

@@ -41,7 +41,7 @@ const Footer = () => {
                 <p className="text-purple-400 text-xs">The Hunt Beyond Logic</p>
               </div>
             </div>
-            <p className="text-white/60 text-sm leading-relaxed">
+            <p className="text-white/60 text-sm leading-relaxed text-justify">
               An extraordinary intellectual challenge where participants dive
               into mind-bending puzzles and thrilling mysteries.
             </p>

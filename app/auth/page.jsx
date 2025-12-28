@@ -113,11 +113,11 @@ const LoginPage = () => {
               </span>
             </h2>
             <p className="text-2xl text-purple-300 font-semibold">
-              ENTER THE PARADOX
+              ENTER THE HUNT
             </p>
             <div className="flex items-center justify-center gap-2 mt-6">
               <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-500"></div>
-              <span className="text-purple-400 text-sm">December 13, 2025</span>
+              <span className="text-purple-400 text-sm">December 29, 2025</span>
               <div className="h-px w-12 bg-gradient-to-l from-transparent to-purple-500"></div>
             </div>
           </div>

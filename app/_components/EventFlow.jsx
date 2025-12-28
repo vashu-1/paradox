@@ -89,7 +89,7 @@ const EventFlow = () => {
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
               Event Flow
             </span>
           </h2>

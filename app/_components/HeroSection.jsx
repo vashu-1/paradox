@@ -66,7 +66,7 @@ const HeroSection = () => {
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
           data-aos="fade-down"
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
             CipherX
           </span>
         </h1>
@@ -77,7 +77,7 @@ const HeroSection = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-300 to-blue-400">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
             The Hunt Beyond Logic
           </span>
         </div>

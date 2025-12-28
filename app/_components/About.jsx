@@ -66,7 +66,7 @@ const About = () => {
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
               What is CipherX?
             </span>
           </h2>
@@ -161,7 +161,7 @@ const About = () => {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-pink-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
                 Timeline
               </span>
             </h2>
@@ -171,14 +171,14 @@ const About = () => {
           </div>
 
           <div
-            className="max-w-3xl mx-auto"
+            className="max-w-2xl mx-auto"
             data-aos="zoom-in"
             data-aos-delay="100"
           >
             <img
               src="/timeline.png"
               alt="Event Timeline"
-              className="w-full rounded-2xl border border-purple-500/30 shadow-2xl shadow-purple-900/50 hover:scale-105 transition-transform duration-300"
+              className="w-full h-[90vh] object-contain rounded-2xl border border-purple-500/30 shadow-2xl shadow-purple-900/50 hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>

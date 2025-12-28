@@ -1,6 +1,8 @@
 'use client';
 import { supabase } from '@/Services/SupabaseClient';
 import { UserDetailContext } from '@/context/UserDetailContext';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import React, { useState, useEffect, useContext } from 'react';
 
@@ -9,6 +11,11 @@ const Provider = ({ children }) => {
 
   useEffect(() => {
     createNewUser();
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+    });
   }, []);
 
   const createNewUser = async () => {

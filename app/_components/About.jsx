@@ -54,7 +54,7 @@ const About = () => {
 
       <div className="relative z-10 container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-purple-500/30 bg-purple-950/30 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
@@ -66,7 +66,7 @@ const About = () => {
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500">
               What is CipherX?
             </span>
           </h2>
@@ -90,7 +90,11 @@ const About = () => {
         </div>
 
         {/* Main Description */}
-        <div className="max-w-4xl mx-auto mb-20">
+        <div
+          className="max-w-4xl mx-auto mb-20"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div className="bg-gradient-to-br from-purple-950/40 to-black/40 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-8 lg:p-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 mb-6">
               The Trigger
@@ -122,6 +126,8 @@ const About = () => {
           {features.map((feature, index) => (
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
               className="group bg-gradient-to-br from-purple-950/30 to-black/30 backdrop-blur-sm rounded-xl border border-purple-500/20 p-6 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-start gap-4">
@@ -143,7 +149,7 @@ const About = () => {
 
         {/* Timeline */}
         <div id="timeline" className="mt-20">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-purple-500/30 bg-purple-950/30 backdrop-blur-sm">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
@@ -154,18 +160,25 @@ const About = () => {
               </span>
             </div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-pink-400">
                 Timeline
               </span>
             </h2>
+            <p className="text-white/60 text-base sm:text-lg max-w-2xl mx-auto">
+              Mark your calendars for these important milestones
+            </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
+          <div
+            className="max-w-3xl mx-auto"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
             <img
               src="/timeline.png"
               alt="Event Timeline"
-              className="w-full rounded-2xl border border-purple-500/30 shadow-2xl shadow-purple-900/50"
+              className="w-full rounded-2xl border border-purple-500/30 shadow-2xl shadow-purple-900/50 hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>

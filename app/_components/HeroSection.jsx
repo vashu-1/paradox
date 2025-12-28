@@ -62,27 +62,42 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 mt-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Title */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+          data-aos="fade-down"
+        >
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500">
             CipherX
           </span>
         </h1>
 
         {/* Subtitle */}
-        <div className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-purple-400">
+        <div
+          className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-300 to-blue-400">
             The Hunt Beyond Logic
           </span>
         </div>
 
         {/* Event Description */}
-        <p className="text-white/80 text-md sm:text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p
+          className="text-white/80 text-md sm:text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           Prepare to challenge reality. A journey beyond the ordinary awaits
           those brave enough to step through the portal.
         </p>
 
         {/* Countdown Timer */}
-        <div className="bg-gradient-to-r from-purple-900/40 via-purple-800/40 to-purple-900/40 backdrop-blur-md rounded-2xl border border-purple-500/30 p-8 mb-8 max-w-4xl mx-auto">
+        <div
+          className="bg-gradient-to-r from-purple-900/40 via-purple-800/40 to-purple-900/40 backdrop-blur-md rounded-2xl border border-purple-500/30 p-8 mb-8 max-w-4xl mx-auto"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-center gap-3">
               <svg

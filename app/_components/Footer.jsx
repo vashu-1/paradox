@@ -31,7 +31,7 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand Column */}
-          <div className="space-y-4">
+          <div className="space-y-4" data-aos="fade-up">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white" />
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div data-aos="fade-up" data-aos-delay="100">
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
@@ -121,7 +121,7 @@ const Footer = () => {
           </div>
 
           {/* Event Info */}
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200">
             <h4 className="text-white font-semibold mb-4">Event Details</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm">
@@ -155,7 +155,7 @@ const Footer = () => {
           </div>
 
           {/* Model Club */}
-          <div>
+          <div data-aos="fade-up" data-aos-delay="300">
             <h4 className="text-white font-semibold mb-4">Organized By</h4>
             <div className="space-y-3">
               <div className="p-4 bg-gradient-to-br from-purple-950/40 to-black/40 backdrop-blur-sm rounded-lg border border-purple-500/20">

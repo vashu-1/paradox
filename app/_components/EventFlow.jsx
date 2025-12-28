@@ -77,7 +77,7 @@ const EventFlow = () => {
 
       <div className="relative z-10 container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-purple-500/30 bg-purple-950/30 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
@@ -89,7 +89,7 @@ const EventFlow = () => {
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500">
               Event Flow
             </span>
           </h2>
@@ -103,7 +103,12 @@ const EventFlow = () => {
         {/* Timeline */}
         <div className="max-w-6xl mx-auto">
           {rounds.map((round, index) => (
-            <div key={round.number} className="relative mb-12 last:mb-0">
+            <div
+              key={round.number}
+              className="relative mb-12 last:mb-0"
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
+            >
               {/* Connecting Line */}
               {index < rounds.length - 1 && (
                 <div className="absolute left-8 top-32 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-transparent hidden lg:block" />
@@ -185,7 +190,11 @@ const EventFlow = () => {
         </div>
 
         {/* Final Prize Section */}
-        <div className="mt-16 max-w-4xl mx-auto">
+        <div
+          className="mt-16 max-w-4xl mx-auto"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
           <div className="bg-gradient-to-r from-purple-900/40 via-purple-800/40 to-purple-900/40 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-8 text-center">
             <div className="flex justify-center mb-4">
               <Trophy className="w-16 h-16 text-yellow-400" />

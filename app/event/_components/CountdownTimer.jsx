@@ -193,7 +193,7 @@ const CountdownTimer = ({
                   <p>
                     The registration and quiz will be accessible once the
                     countdown reaches 00:00:00. The event will remain open for{' '}
-                    {eventDurationHours} hours. Please stay on this page.
+                    {eventDurationHours} hour. Please stay on this page.
                   </p>
                 )}
               </div>

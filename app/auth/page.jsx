@@ -109,11 +109,11 @@ const LoginPage = () => {
           <div className="text-center space-y-4">
             <h2 className="text-5xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-200 to-purple-400">
-                THE TRIGGER
+                CipherX
               </span>
             </h2>
             <p className="text-2xl text-purple-300 font-semibold">
-              ENTER THE HUNT
+              The Hunt Beyond Logic
             </p>
             <div className="flex items-center justify-center gap-2 mt-6">
               <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-500"></div>

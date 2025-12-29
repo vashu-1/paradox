@@ -4,7 +4,7 @@ import { Clock, Lock, Unlock, XCircle } from 'lucide-react';
 
 const CountdownTimer = ({
   targetDate,
-  eventDurationHours = 2,
+  eventDurationHours = 1.25,
   onTimerEnd,
   onEventExpired,
 }) => {

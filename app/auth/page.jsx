@@ -188,11 +188,11 @@ const LoginPage = () => {
             <div className="text-center mb-8 lg:hidden">
               <h1 className="text-4xl font-bold mb-2">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
-                  THE TRIGGER
+                  CipherX
                 </span>
               </h1>
               <p className="text-purple-300 text-sm uppercase tracking-wider">
-                Enter the Paradox
+                The Hunt Beyond Logic
               </p>
             </div>
 

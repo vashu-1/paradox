@@ -233,7 +233,7 @@ const RegisterPage = ({ GoToNext, onDataSubmit }) => {
                   <option value="Civil" className="bg-black">
                     Civil
                   </option>
-                  <option value="Civil" className="bg-black">
+                  <option value="Chemical" className="bg-black">
                     Chemical
                   </option>
                   <option value="Production" className="bg-black">

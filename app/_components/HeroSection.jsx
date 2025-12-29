@@ -238,9 +238,14 @@ const HeroSection = () => {
             <span className="relative z-10">Enter the Event</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
-          <button className="px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-purple-950/30 backdrop-blur-sm">
+          <a
+            href="https://www.instagram.com/p/DSxQD7Mj3bF/?igsh=MXNkbjFqcXJxaHh1bw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-purple-950/30 backdrop-blur-sm inline-block text-center"
+          >
             Learn More
-          </button>
+          </a>
         </div>
 
         {/* Scroll Indicator */}

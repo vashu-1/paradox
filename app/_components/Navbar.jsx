@@ -12,6 +12,8 @@ import { useRouter } from 'next/navigation';
 const Navbar = () => {
   const context = useUser();
   const user = context?.user || null;
+  console.log(user);
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const router = useRouter();
@@ -72,21 +74,11 @@ const Navbar = () => {
                   className="cursor-pointer"
                 >
                   <div className="h-10 w-10 overflow-hidden rounded-full">
-                    {user.picture ? (
-                      <Image
-                        src={user.picture}
-                        alt={user.name || 'User'}
-                        width={40}
-                        height={40}
-                        className="h-full w-full object-cover"
-                      />
-                    ) : (
-                      <div className="flex h-full w-full items-center justify-center text-lg font-semibold text-purple-300 bg-purple-900/50 rounded-full">
-                        {user.name?.[0]?.toUpperCase() ||
-                          user.email?.[0]?.toUpperCase() ||
-                          'U'}
-                      </div>
-                    )}
+                    <div className="flex h-full w-full items-center justify-center text-lg font-semibold text-purple-300 bg-purple-900/50 rounded-full">
+                      {user.email?.[0]?.toUpperCase() ||
+                        user.name?.[0]?.toUpperCase() ||
+                        'U'}
+                    </div>
                   </div>
                 </button>
 

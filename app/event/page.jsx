@@ -9,12 +9,12 @@ import { AlertCircle, Clock, Award, X } from 'lucide-react';
 
 const metadata = {
   title:
-    'CipherX Round 1: The Trigger - Online Treasure Hunt | Model Club BIT Sindri',
+    'CipherX Round 2: The Hidden Transmission - Online Treasure Hunt | Model Club BIT Sindri',
   description:
-    'Join CipherX Round 1: The Trigger - an intense 5-minute quiz with 20 mind-bending riddles and logical challenges. Top 30 performers advance to Round 2. Organized by Model Club, BIT Sindri on December 28, 2025.',
+    'Join CipherX Round 2: The Hidden Transmission - an intense 15-minute quiz with 15 mind-bending riddles and logical challenges. Top 10 performers advance to Round 3. Organized by Model Club, BIT Sindri on January 03, 2026.',
   keywords: [
     'CipherX',
-    'The Trigger',
+    'The Hidden Transmission',
     'online treasure hunt',
     'Model Club BIT Sindri',
     'logic puzzles',
@@ -25,9 +25,9 @@ const metadata = {
     'college quiz competition',
   ],
   openGraph: {
-    title: 'CipherX: The Trigger - Round 1 Quiz Challenge',
+    title: 'CipherX: The Hidden Transmission - Round 2 Quiz Challenge',
     description:
-      'Compete in CipherX Round 1 with 20 interconnected riddles! 5-minute time limit. Top 30 advance. Organized by Model Club, BIT Sindri.',
+      'Compete in CipherX Round 1 with 15 interconnected riddles! 15-minute time limit. Top 10 advance. Organized by Model Club, BIT Sindri.',
     url: 'https://sandhaan-modelclub.in/event',
     siteName: 'CipherX - The Hunt Beyond Logic',
     type: 'website',
@@ -42,9 +42,9 @@ const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CipherX Round 1: The Trigger - Test Your Logic',
+    title: 'CipherX Round 2: The Hidden Transmission - Test Your Logic',
     description:
-      'Join the ultimate treasure hunt! Solve 20 riddles in 5 minutes. Top 30 advance to Round 2. Model Club BIT Sindri.',
+      'Join the ultimate treasure hunt! Solve 15 riddles in 15 minutes. Top 10 advance to Round 3. Model Club BIT Sindri.',
     images: [
       'https://d33609liqwio9r.cloudfront.net/2025-12-27T10:06:36.086Z-WhatsApp_Image_2025-08-30_at_22.53.24_e64e50f8-removebg-preview.png',
     ],
@@ -60,8 +60,8 @@ const page = () => {
   const context = useUser();
   const user = context?.user || null;
 
-  const targetDate = '2025-12-29 18:00:00';
-  const eventDurationHours = 1.4; // Event will be open for 1 hour 15 minutes after start
+  const targetDate = '2026-01-02 17:00:00';
+  const eventDurationHours = 2; // Event will be open for 1 hour 15 minutes after start
   const handleTimerEnd = () => {
     setIsTimerExpired(true);
   };
@@ -215,11 +215,11 @@ const page = () => {
                 <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-sm sm:text-base font-semibold text-white mb-1">
-                    Time Limit: 5 Minutes
+                    Time Limit: 10 Minutes
                   </h3>
                   <p className="text-xs sm:text-sm text-purple-300">
-                    You have exactly 5 minutes to complete all 20 questions. The
-                    quiz will auto-submit when time runs out.
+                    You have exactly 10 minutes to complete all 10 questions.
+                    The quiz will auto-submit when time runs out.
                   </p>
                 </div>
               </div>
@@ -228,7 +228,7 @@ const page = () => {
                 <Award className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-sm sm:text-base font-semibold text-white mb-1">
-                    Total Questions: 20
+                    Total Questions: 10
                   </h3>
                   <p className="text-xs sm:text-sm text-purple-300">
                     All questions are interconnected puzzles. Each answer leads

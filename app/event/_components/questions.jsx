@@ -1,15 +1,16 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import questions from './Constant';
-import { Clock, CheckCircle } from 'lucide-react';
+import { Clock, CheckCircle, ExternalLink } from 'lucide-react';
 import { toast } from 'sonner';
 import { useUser } from '@/app/provider';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/Services/SupabaseClient';
+import Image from 'next/image';
 
 const QuestionContainer = ({ userData }) => {
   const [answers, setAnswers] = useState({});
-  const [timeLeft, setTimeLeft] = useState(300); // 5 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(900); // 5 minutes in seconds
   const [isSubmitted, setIsSubmitted] = useState(false);
   const context = useUser();
   const user = context?.user || null;
@@ -60,13 +61,18 @@ const QuestionContainer = ({ userData }) => {
         return;
       }
 
-      // Insert score and user data into Supabase
+      // Determine which score table to use
+      const isModelClub =
+        user?.isModelClub || authUser.email === 'modelclub@gmail.com';
+      const scoreTable = isModelClub ? 'modelScore' : 'round2score';
+
+      // Insert score and user data into appropriate Supabase table
       const { data, error } = await supabase
-        .from('score')
+        .from(scoreTable)
         .insert([
           {
             user_id: authUser.id,
-            name: userData?.name || user?.Name,
+            name: userData?.name || user?.Name || user?.name,
 
             branch: userData?.branch,
             batch: userData?.batch,
@@ -74,7 +80,7 @@ const QuestionContainer = ({ userData }) => {
             score: score,
 
             answers: JSON.stringify(answers),
-            time_taken: 300 - timeLeft, // Time taken in seconds
+            time_taken: 900 - timeLeft, // Time taken in seconds
           },
         ])
         .select();
@@ -85,9 +91,11 @@ const QuestionContainer = ({ userData }) => {
         return;
       }
 
-      console.log('Results saved:', data);
+      console.log('Results saved to', scoreTable, ':', data);
       toast.success(
-        `Thanks for participating, ${userData?.name || user?.Name}!`
+        `Thanks for participating, ${
+          userData?.name || user?.Name || user?.name
+        }!`
       );
 
       setTimeout(() => {
@@ -112,36 +120,36 @@ const QuestionContainer = ({ userData }) => {
     <div className="min-h-screen bg-gradient-to-br from-purple-950 via-black to-purple-900 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header with Timer */}
-        <div className="bg-gradient-to-r from-purple-900/40 via-purple-800/40 to-purple-900/40 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-3 sm:p-4 md:p-6 mb-6 sm:mb-8 sticky top-4 z-10">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+        <div className="bg-gradient-to-r from-purple-900/40 via-purple-800/40 to-purple-900/40 backdrop-blur-xl rounded-xl border border-purple-500/30 p-2 sm:p-3 md:p-4 mb-4 sm:mb-6 sticky top-2 z-10">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3">
             <div>
-              <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white via-purple-200 to-white mb-1">
+              <h1 className="text-sm sm:text-lg md:text-xl font-bold text-transparent bg-clip-text bg-linear-to-r from-white via-purple-200 to-white mb-0.5">
                 Puzzle Round
               </h1>
-              <p className="text-purple-300 text-xs sm:text-sm">
+              <p className="text-purple-300 text-[10px] sm:text-xs">
                 Answer all questions to complete the round
               </p>
             </div>
 
             {/* Timer */}
             <div
-              className={`flex items-center gap-2 sm:gap-3 px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl border-2 ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg border-2 ${
                 timeLeft <= 60
                   ? 'bg-red-950/50 border-red-500/50'
                   : 'bg-purple-950/50 border-purple-500/30'
               }`}
             >
               <Clock
-                className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 ${
+                className={`w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 ${
                   timeLeft <= 60 ? 'text-red-400' : 'text-purple-400'
                 }`}
               />
               <div>
-                <p className="text-[10px] sm:text-xs text-gray-400">
+                <p className="text-[9px] sm:text-[10px] text-gray-400">
                   Time Remaining
                 </p>
                 <p
-                  className={`text-base sm:text-xl md:text-2xl font-bold ${
+                  className={`text-sm sm:text-lg md:text-xl font-bold ${
                     timeLeft <= 60 ? 'text-red-400' : 'text-white'
                   }`}
                 >
@@ -152,14 +160,14 @@ const QuestionContainer = ({ userData }) => {
           </div>
 
           {/* Progress Bar */}
-          <div className="mt-3 sm:mt-4">
-            <div className="flex justify-between text-xs sm:text-sm text-purple-300 mb-2">
+          <div className="mt-2 sm:mt-3">
+            <div className="flex justify-between text-[10px] sm:text-xs text-purple-300 mb-1.5">
               <span>
                 Answered: {answeredCount} / {questions.length}
               </span>
               <span>{Math.round(progress)}%</span>
             </div>
-            <div className="w-full bg-purple-950/50 rounded-full h-2.5 overflow-hidden">
+            <div className="w-full bg-purple-950/50 rounded-full h-2 overflow-hidden">
               <div
                 className="bg-gradient-to-r from-purple-600 to-purple-400 h-full transition-all duration-300"
                 style={{ width: `${progress}%` }}
@@ -169,24 +177,61 @@ const QuestionContainer = ({ userData }) => {
         </div>
 
         {/* Questions */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           {questions.map((question, index) => (
             <div
               key={question.id}
-              className="bg-gradient-to-br from-purple-950/40 to-black/40 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 hover:border-purple-500/50 transition-all duration-300"
+              className="bg-gradient-to-br from-purple-950/40 to-black/40 backdrop-blur-xl rounded-xl border border-purple-500/30 p-4 sm:p-5 hover:border-purple-500/50 transition-all duration-300 shadow-lg"
             >
               {/* Question Header */}
-              <div className="flex items-start gap-4 mb-6">
-                <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center text-white font-bold">
+              <div className="flex items-start gap-3 mb-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center text-white font-bold text-sm">
                   {index + 1}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
+                  <h3 className="text-sm sm:text-base font-semibold text-white mb-2 whitespace-pre-line leading-relaxed">
                     {question.question}
                   </h3>
+
+                  {/* Image Display */}
+                  {question.image && (
+                    <div
+                      className={`my-3 rounded-lg overflow-hidden border-2 border-purple-500/30 mx-auto ${
+                        question.id === 7 || question.id === 10
+                          ? 'max-w-xs'
+                          : 'max-w-md'
+                      }`}
+                    >
+                      <Image
+                        src={question.image}
+                        alt={`Question ${question.id} visual`}
+                        width={
+                          question.id === 7 || question.id === 10 ? 300 : 400
+                        }
+                        height={
+                          question.id === 7 || question.id === 10 ? 225 : 300
+                        }
+                        className="w-full h-auto object-contain"
+                      />
+                    </div>
+                  )}
+
+                  {/* Clickable Link */}
+                  {question.link && (
+                    <a
+                      href={question.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 mt-2 text-xs sm:text-sm bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/30"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      {question.linkText || 'View Resource'}
+                    </a>
+                  )}
+
                   {answers[question.id] && (
-                    <div className="flex items-center gap-2 text-green-400 text-sm">
-                      <CheckCircle className="w-4 h-4" />
+                    <div className="flex items-center gap-1.5 text-green-400 text-xs mt-2">
+                      <CheckCircle className="w-3.5 h-3.5" />
                       <span>Answered</span>
                     </div>
                   )}
@@ -194,66 +239,82 @@ const QuestionContainer = ({ userData }) => {
               </div>
 
               {/* Options */}
-              <div className="grid gap-3">
-                {question.options.map((option, optionIndex) => (
-                  <label
-                    key={optionIndex}
-                    className={`group relative flex items-center gap-4 p-4 rounded-xl border-2 transition-all duration-300 hover:scale-[1.02] ${
-                      answers[question.id] === option
-                        ? 'bg-purple-900/40 border-purple-500 shadow-lg shadow-purple-500/20'
-                        : 'bg-purple-950/20 border-purple-500/20 hover:border-purple-500/50'
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name={`question-${question.id}`}
-                      value={option}
-                      checked={answers[question.id] === option}
-                      onChange={(e) =>
-                        handleAnswerChange(question.id, e.target.value)
-                      }
-                      disabled={isSubmitted}
-                      className="w-5 h-5 text-purple-600 focus:ring-purple-500 focus:ring-2"
-                    />
-                    <span
-                      className={`flex-1 text-base ${
+              <div className="grid gap-2">
+                {question.options.length > 0 ? (
+                  question.options.map((option, optionIndex) => (
+                    <label
+                      key={optionIndex}
+                      className={`group relative flex items-center gap-3 p-3 rounded-lg border-2 transition-all duration-300 hover:scale-[1.01] cursor-pointer ${
                         answers[question.id] === option
-                          ? 'text-white font-medium'
-                          : 'text-gray-300'
+                          ? 'bg-purple-900/40 border-purple-500 shadow-lg shadow-purple-500/20'
+                          : 'bg-purple-950/20 border-purple-500/20 hover:border-purple-500/50'
                       }`}
                     >
-                      {option}
-                    </span>
-                  </label>
-                ))}
+                      <input
+                        type="radio"
+                        name={`question-${question.id}`}
+                        value={option}
+                        checked={answers[question.id] === option}
+                        onChange={(e) =>
+                          handleAnswerChange(question.id, e.target.value)
+                        }
+                        disabled={isSubmitted}
+                        className="w-4 h-4 text-purple-600 focus:ring-purple-500 focus:ring-2"
+                      />
+                      <span
+                        className={`flex-1 text-sm ${
+                          answers[question.id] === option
+                            ? 'text-white font-medium'
+                            : 'text-gray-300'
+                        }`}
+                      >
+                        {option}
+                      </span>
+                    </label>
+                  ))
+                ) : (
+                  // Text input for questions without options (like Q6)
+                  <input
+                    type="text"
+                    placeholder="Type your answer here..."
+                    value={answers[question.id] || ''}
+                    onChange={(e) =>
+                      handleAnswerChange(question.id, e.target.value)
+                    }
+                    disabled={isSubmitted}
+                    className="w-full px-3 py-2 text-sm bg-purple-950/30 border-2 border-purple-500/30 rounded-lg text-white placeholder-purple-300/50 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/50 transition-all"
+                  />
+                )}
               </div>
             </div>
           ))}
         </div>
 
         {/* Submit Button */}
-        <div className="mt-8 bottom-4">
+        <div className="mt-6 bottom-4">
           <button
             onClick={handleSubmit}
-            disabled={answeredCount < questions.length || isSubmitted}
-            className="w-full group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-xl shadow-purple-500/30"
+            disabled={isSubmitted}
+            className="w-full group relative px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white font-bold text-base rounded-xl transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-xl shadow-purple-500/30"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
             <span className="relative flex items-center justify-center gap-3">
               {isSubmitted ? (
                 'Submitted Successfully!'
-              ) : answeredCount < questions.length ? (
-                `Answer ${questions.length - answeredCount} more question${
-                  questions.length - answeredCount > 1 ? 's' : ''
-                } to submit`
               ) : (
                 <>
-                  <CheckCircle className="w-6 h-6" />
-                  Submit Quiz
+                  <CheckCircle className="w-5 h-5" />
+                  Submit Quiz ({answeredCount}/{questions.length} answered)
                 </>
               )}
             </span>
           </button>
+          {!isSubmitted && answeredCount < questions.length && (
+            <p className="text-center text-purple-300 text-xs mt-2">
+              You can submit anytime. Unanswered questions will be marked as
+              incorrect.
+            </p>
+          )}
         </div>
       </div>
     </div>

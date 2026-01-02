@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { supabase } from '../../../Services/SupabaseClient';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
+import { useUser } from '../../provider';
+
 import {
   User,
   Mail,
@@ -14,6 +16,7 @@ import {
 
 const RegisterPage = ({ GoToNext, onDataSubmit }) => {
   const router = useRouter();
+  const { user: contextUser } = useUser();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
@@ -64,9 +67,14 @@ const RegisterPage = ({ GoToNext, onDataSubmit }) => {
         return;
       }
 
-      // Insert registration data
+      // Determine which table to use based on user account
+      const isModelClub =
+        contextUser?.isModelClub || user.email === 'modelclub@gmail.com';
+      const registrationTable = isModelClub ? 'modelInfo' : 'userDetails';
+
+      // Insert registration data into appropriate table
       const { data, error: insertError } = await supabase
-        .from('userInfo')
+        .from(registrationTable)
         .insert([
           {
             name: formData.name,
@@ -79,6 +87,8 @@ const RegisterPage = ({ GoToNext, onDataSubmit }) => {
         ]);
 
       if (insertError) throw insertError;
+
+      console.log('Registration saved to', registrationTable, ':', data);
 
       setSuccess(true);
       setLoading(false);

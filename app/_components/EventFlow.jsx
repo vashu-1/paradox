@@ -34,7 +34,7 @@ const EventFlow = () => {
       title: 'Round 2: The Hidden Transmission',
       description:
         'Agents who make it through will receive a classified email containing encrypted data, secret links, and hidden coordinates. Clues may lurk in attachments, metadata, or URLs — you’ll need keen eyes and sharper minds to decode the digital maze. Only the best codebreakers will find the real message buried in the noise and move on to the final showdown. ',
-      duration: '15 minutes',
+      duration: '10 minutes',
       participants: 'Shortlisted Participants',
       icon: <Target className="w-12 h-12" />,
       color: 'from-purple-700 to-purple-900',

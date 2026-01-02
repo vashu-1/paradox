@@ -97,26 +97,26 @@ const About = () => {
         >
           <div className="bg-gradient-to-br from-purple-950/40 to-black/40 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-8 lg:p-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 mb-6">
-              The Trigger
+              The Hidden Transmission
             </h3>
             <p className="text-white/80 text-lg leading-relaxed mb-4 text-justify">
-              The operation begins with a rapid series of advanced riddles,
-              logical traps, and pattern-based challenges. Every answer unlocks
-              a piece of the bigger picture — but beware, not every clue is what
-              it seems. Top performers will advance to the next phase of the
-              mission — where mystery meets misdirection.
+              Agents who make it through will receive a classified email
+              containing encrypted data, secret links, and hidden coordinates.
+              Clues may lurk in attachments, metadata, or URLs — you’ll need
+              keen eyes and sharper minds to decode the digital maze. Only the
+              best codebreakers will find the real message buried in the noise
+              and move on to the final showdown.
             </p>
             <p className="text-white/80 text-lg leading-relaxed mb-4">
-              Only Top 30 individuals will move to the second round of the
-              event.
+              Only Top 10 individuals will move to the third round of the event.
             </p>
             <p className="text-white/80 text-lg leading-relaxed text-justify">
               Join us on{' '}
               <span className="text-purple-400 font-semibold">
-                December 29, 2025
+                January 3, 2026
               </span>
-              , and prove that you have what it takes to conquer the trigger and
-              emerge victorious!
+              , and prove that you have what it takes to conquer the hidden
+              transmission and emerge victorious!
             </p>
           </div>
         </div>

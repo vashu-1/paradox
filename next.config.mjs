@@ -8,6 +8,11 @@ const nextConfig = {
         hostname: 'lh3.googleusercontent.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'd33609liqwio9r.cloudfront.net',
+        pathname: '/**',
+      },
     ],
   },
 };

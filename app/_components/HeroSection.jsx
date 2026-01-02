@@ -211,15 +211,15 @@ const HeroSection = () => {
                 <p className="text-amber-100/90 text-sm leading-relaxed mb-2">
                   Please make sure you are{' '}
                   <span className="font-bold text-amber-200">
-                    logged in with Google
+                    logged in with credentials provided
                   </span>{' '}
                   before entering the event. Authentication is mandatory for
                   registration and quiz participation.
                 </p>
                 <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-3 mt-3">
                   <p className="text-amber-200/90 text-xs font-medium">
-                    ⚠️ Without Google login, the event registration and quiz
-                    will not work properly.
+                    ⚠️ Without login, the event registration and quiz will not
+                    work properly.
                   </p>
                 </div>
               </div>

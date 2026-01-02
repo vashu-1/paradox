@@ -142,7 +142,7 @@ const RegisterPage = ({ GoToNext, onDataSubmit }) => {
               </span>
             </h1>
             <p className="text-purple-300 text-xs sm:text-sm uppercase tracking-wider">
-              The Trigger
+              The Hidden Transmission
             </p>
           </div>
 

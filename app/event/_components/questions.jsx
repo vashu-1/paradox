@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 const QuestionContainer = ({ userData }) => {
   const [answers, setAnswers] = useState({});
-  const [timeLeft, setTimeLeft] = useState(900); // 5 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(600); // 5 minutes in seconds
   const [isSubmitted, setIsSubmitted] = useState(false);
   const context = useUser();
   const user = context?.user || null;
@@ -80,7 +80,7 @@ const QuestionContainer = ({ userData }) => {
             score: score,
 
             answers: JSON.stringify(answers),
-            time_taken: 900 - timeLeft, // Time taken in seconds
+            time_taken: 600 - timeLeft, // Time taken in seconds
           },
         ])
         .select();

@@ -44,7 +44,7 @@ const metadata = {
     card: 'summary_large_image',
     title: 'CipherX Round 2: The Hidden Transmission - Test Your Logic',
     description:
-      'Join the ultimate treasure hunt! Solve 15 riddles in 15 minutes. Top 10 advance to Round 3. Model Club BIT Sindri.',
+      'Join the ultimate treasure hunt! Solve 10 riddles in 10 minutes. Top 10 advance to Round 3. Model Club BIT Sindri.',
     images: [
       'https://d33609liqwio9r.cloudfront.net/2025-12-27T10:06:36.086Z-WhatsApp_Image_2025-08-30_at_22.53.24_e64e50f8-removebg-preview.png',
     ],
@@ -60,7 +60,7 @@ const page = () => {
   const context = useUser();
   const user = context?.user || null;
 
-  const targetDate = '2026-01-02 17:00:00';
+  const targetDate = '2026-01-02 18:30:00';
   const eventDurationHours = 2; // Event will be open for 1 hour 15 minutes after start
   const handleTimerEnd = () => {
     setIsTimerExpired(true);

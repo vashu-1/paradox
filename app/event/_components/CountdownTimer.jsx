@@ -200,15 +200,6 @@ const CountdownTimer = ({
             </div>
           </div>
         </div>
-
-        {/* Additional Info */}
-        {!isExpired && (
-          <div className="text-center mt-6">
-            <p className="text-purple-400/70 text-sm">
-              Please do not refresh the page during the countdown
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );

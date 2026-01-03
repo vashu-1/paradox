@@ -13,33 +13,22 @@ const QuestionContainer = ({ userData }) => {
   const [timeLeft, setTimeLeft] = useState(600); // 5 minutes in seconds
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [sessionId] = useState(() => {
-    // Generate or retrieve session ID
-    let currentSessionId = sessionStorage.getItem('quizSessionId');
-    if (!currentSessionId) {
-      currentSessionId = Date.now().toString();
-      sessionStorage.setItem('quizSessionId', currentSessionId);
-      // Clear old localStorage data when new session starts
-      localStorage.removeItem('quizAnswers');
-      localStorage.removeItem('quizTimeLeft');
-      localStorage.removeItem('quizIsSubmitted');
-    }
+    // Generate session ID for each new quiz attempt
+    const currentSessionId = Date.now().toString();
+    sessionStorage.setItem('quizSessionId', currentSessionId);
     return currentSessionId;
   });
   const context = useUser();
   const user = context?.user || null;
   const router = useRouter();
 
-  // Load saved data from localStorage on mount (only for current session)
+  // Load only answers from localStorage on mount (not time)
   useEffect(() => {
     const savedAnswers = localStorage.getItem('quizAnswers');
-    const savedTimeLeft = localStorage.getItem('quizTimeLeft');
     const savedIsSubmitted = localStorage.getItem('quizIsSubmitted');
 
     if (savedAnswers) {
       setAnswers(JSON.parse(savedAnswers));
-    }
-    if (savedTimeLeft && parseInt(savedTimeLeft) < 600) {
-      setTimeLeft(parseInt(savedTimeLeft));
     }
     if (savedIsSubmitted === 'true') {
       setIsSubmitted(true);
@@ -52,13 +41,6 @@ const QuestionContainer = ({ userData }) => {
       localStorage.setItem('quizAnswers', JSON.stringify(answers));
     }
   }, [answers]);
-
-  // Save timeLeft to localStorage whenever it changes
-  useEffect(() => {
-    if (timeLeft < 600) {
-      localStorage.setItem('quizTimeLeft', timeLeft.toString());
-    }
-  }, [timeLeft]);
 
   // Save submission status to localStorage
   useEffect(() => {
@@ -149,7 +131,6 @@ const QuestionContainer = ({ userData }) => {
 
       // Clear localStorage and sessionStorage after successful submission
       localStorage.removeItem('quizAnswers');
-      localStorage.removeItem('quizTimeLeft');
       localStorage.removeItem('quizIsSubmitted');
       sessionStorage.removeItem('quizSessionId');
 

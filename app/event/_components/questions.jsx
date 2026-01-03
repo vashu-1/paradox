@@ -16,6 +16,38 @@ const QuestionContainer = ({ userData }) => {
   const user = context?.user || null;
   const router = useRouter();
 
+  // Load saved data from localStorage on mount
+  useEffect(() => {
+    const savedAnswers = localStorage.getItem('quizAnswers');
+    const savedTimeLeft = localStorage.getItem('quizTimeLeft');
+    const savedIsSubmitted = localStorage.getItem('quizIsSubmitted');
+
+    if (savedAnswers) {
+      setAnswers(JSON.parse(savedAnswers));
+    }
+    if (savedTimeLeft) {
+      setTimeLeft(parseInt(savedTimeLeft));
+    }
+    if (savedIsSubmitted === 'true') {
+      setIsSubmitted(true);
+    }
+  }, []);
+
+  // Save answers to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('quizAnswers', JSON.stringify(answers));
+  }, [answers]);
+
+  // Save timeLeft to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('quizTimeLeft', timeLeft.toString());
+  }, [timeLeft]);
+
+  // Save submission status to localStorage
+  useEffect(() => {
+    localStorage.setItem('quizIsSubmitted', isSubmitted.toString());
+  }, [isSubmitted]);
+
   // Timer countdown
   useEffect(() => {
     if (timeLeft <= 0) {
@@ -97,6 +129,11 @@ const QuestionContainer = ({ userData }) => {
           userData?.name || user?.Name || user?.name
         }!`
       );
+
+      // Clear localStorage after successful submission
+      localStorage.removeItem('quizAnswers');
+      localStorage.removeItem('quizTimeLeft');
+      localStorage.removeItem('quizIsSubmitted');
 
       setTimeout(() => {
         router.push('/');
@@ -227,6 +264,15 @@ const QuestionContainer = ({ userData }) => {
                       <ExternalLink className="w-3 h-3" />
                       {question.linkText || 'View Resource'}
                     </a>
+                  )}
+
+                  {/* Note/Key Display */}
+                  {question.note && (
+                    <div className="mt-3 p-2.5 bg-yellow-900/20 border border-yellow-500/30 rounded-lg">
+                      <p className="text-xs sm:text-sm text-yellow-200/90 whitespace-pre-line leading-relaxed">
+                        {question.note}
+                      </p>
+                    </div>
                   )}
 
                   {answers[question.id] && (

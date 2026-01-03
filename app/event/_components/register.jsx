@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { supabase } from '../../../Services/SupabaseClient';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
@@ -28,6 +28,19 @@ const RegisterPage = ({ GoToNext, onDataSubmit }) => {
     batch: '',
     registrationNumber: '',
   });
+
+  // Load saved data from localStorage on mount
+  useEffect(() => {
+    const savedFormData = localStorage.getItem('registerFormData');
+    if (savedFormData) {
+      setFormData(JSON.parse(savedFormData));
+    }
+  }, []);
+
+  // Save form data to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('registerFormData', JSON.stringify(formData));
+  }, [formData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -92,6 +105,9 @@ const RegisterPage = ({ GoToNext, onDataSubmit }) => {
 
       setSuccess(true);
       setLoading(false);
+
+      // Clear saved form data on successful registration
+      localStorage.removeItem('registerFormData');
 
       // Pass form data to parent
       if (onDataSubmit) {

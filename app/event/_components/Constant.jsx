@@ -9,8 +9,7 @@ const questions = [
   {
     id: 2,
     question: 'What fruit is missing in the fruit bowl grid?',
-    image:
-      'https://d33609liqwio9r.cloudfront.net/2026-01-02T06:21:48.489Z-Picture1.jpg', // Add your image path here
+    image: '/2.jpeg', // Add your image path here
     options: ['Orange', 'Dates', 'Mango', 'Plum'],
     correctAnswer: 'Mango',
   },
@@ -20,8 +19,8 @@ const questions = [
       'I run, but I cannot walk. I sometimes sing but never talk. I lack arms, but I have hands. I lack a head, but I have a face. What am I?\n\nHint: "Hints are not always hints, and warnings are not always threats"',
     link: 'https://drive.google.com/drive/folders/1nWcw25h--ozNcR-e5SXBHykqYmhfjxh_',
     linkText: 'Click here for hints',
-    options: ['River', 'Radio', 'Deck of cards', 'Clock'],
-    correctAnswer: 'Clock',
+    options: ['A River', 'A Radio', 'A Deck of cards', 'A Clock'],
+    correctAnswer: 'A Clock',
   },
   {
     id: 4,
@@ -35,9 +34,12 @@ const questions = [
   {
     id: 5,
     question:
-      "A single apple was taken from a local vendor. Five suspects from Mr. Bryant's class—Jim, Hank, Tom, Don, and Eddie—were interrogated.\n\nMr. Bryant, knowing his students' characters perfectly, revealed a crucial detail: Exactly three of these boys always tell the truth, while exactly two of them lie every time.\n\nTheir testimonies were as follows:\n• Jim: 'It was either Hank or Tom.'\n• Hank: 'Neither Eddie nor I did it.'\n• Tom: 'Both Jim and Hank are lying.'\n• Don: 'Exactly one of them [Jim or Hank] is lying; the other is telling the truth.'\n• Eddie: 'Don, what you just said is a lie.'\n\n📄 Here a password protected PDF will be uploaded which contains The Question that is asked for this Situation, password will be the answer of question 3 (all in small letters), PDF name will be TRAP.\n\nBased on these statements, who took the apple? → this statement will be in the protected PDF\n\nHint: \"We gave you the situation, we gave you the options, but we kept the subject. You have the 'How' and the 'Where,' but you are missing the 'Who.' The 'Who' is currently locked inside a 1.2MB container labeled as a TRAP. Will you release the data\"",
+      "A single apple was taken from a local vendor. Five suspects from Mr. Bryant's class—Jim, Hank, Tom, Don, and Eddie—were interrogated.\n\nMr. Bryant, knowing his students' characters perfectly, revealed a crucial detail: Exactly three of these boys always tell the truth, while exactly two of them lie every time.\n\nTheir testimonies were as follows:\n• Jim: 'It was either Hank or Tom.'\n• Hank: 'Neither Eddie nor I did it.'\n• Tom: 'Both Jim and Hank are lying.'\n• Don: 'Exactly one of them [Jim or Hank] is lying; the other is telling the truth.'\n• Eddie: 'Don, what you just said is a lie.'\n\n 📄Hint: \"We gave you the situation, we gave you the options, but we kept the subject. You have the 'How' and the 'Where,' but you are missing the 'Who.' The 'Who' is currently locked inside a 38.5kb container labeled as a TRAP. Will you release the data\"",
+    link: '/TRAP.pdf',
+    linkText: 'Download TRAP.pdf',
     options: ['Hank', 'Tom', 'Eddie', 'Don', 'Insufficient data'],
     correctAnswer: 'Eddie',
+    note: '🔑 Key: The password of this encrypted pdf is the Answer of Question 3(all characters in small letters without any space)',
   },
   {
     id: 6,
@@ -52,8 +54,7 @@ const questions = [
       'The loudest signal is often the greatest lie. Do not let your hunger for the end blind you to the teeth of the trap. This link is a whisper—tread carefully, or it will become a scream.\n\nHint: "The world will try to feed you everything you don\'t need just to keep you from becoming who you\'re meant to be. Stay hungry for the vision, not the distractions"\n\nWHAT PASSCODE YOU REALLY GOT?',
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSceL5FHuQExIgIKm9uUsy0G95lfxThXFXecGtLDgsyCJpQOyg/viewform?usp=header',
     linkText: 'Open the form carefully',
-    image:
-      'https://d33609liqwio9r.cloudfront.net/2026-01-02T06:22:36.733Z-Picture2.jpg',
+    image: '/7.jpeg',
     options: ['5566', '7788', '5577', '6688'],
     correctAnswer: '5577',
   },
@@ -63,8 +64,7 @@ const questions = [
       '🪙 THE COIN PUZZLE\n\n10 coins are placed before you on a table, while you stay blindfolded. The candidate is permitted to touch the coins, however conditions to the puzzle dictates that he can\'t really determine which way up they are by feel.\n\n5 coins are placed heads up, while the other 5 are kept tails up, without the interviewee knowing which ones are which.\n\nIf you\'re allowed to flip the coins any number of times, how would you build two piles of coins each with the same number of heads up?\n\n🔑 KEY: Calculate the sum of the digits in the Question 7 passcode and keep the last digit of the result safely\n\nHint: "Your progress is measured by what you finish, not by how many useless things you explored along the way. Leave the junk for those who want to lose"',
     link: 'https://drive.google.com/drive/folders/1Qoc5MXxYtec23HRDsZCGwuAB8OZuYkeg?usp=sharing',
     linkText: 'View additional resources',
-    image:
-      'https://d33609liqwio9r.cloudfront.net/2026-01-02T06:23:21.532Z-Picture3.jpg',
+    image: '/8.jpeg',
     options: [
       'The Sequential Flip: Line all 10 coins up. Flip every second coin (2nd, 4th, 6th, 8th, 10th) and then split them down the middle.',
       'The Ratio Shift: Create one pile of 3 coins and one pile of 7 coins. Flip the pile of 3 coins twice and the pile of 7 coins once.',

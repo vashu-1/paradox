@@ -10,6 +10,12 @@ const Provider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
+    // Load user from localStorage first for immediate UI update
+    const savedUser = localStorage.getItem('userData');
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+
     createNewUser();
     AOS.init({
       duration: 1000,
@@ -17,6 +23,15 @@ const Provider = ({ children }) => {
       easing: 'ease-in-out',
     });
   }, []);
+
+  // Save user to localStorage whenever it changes
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem('userData', JSON.stringify(user));
+    } else {
+      localStorage.removeItem('userData');
+    }
+  }, [user]);
 
   const createNewUser = async () => {
     const {

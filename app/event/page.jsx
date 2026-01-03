@@ -61,7 +61,7 @@ const page = () => {
   const user = context?.user || null;
 
   const targetDate = '2026-01-03 18:00:00';
-  const eventDurationHours = 1.5; // Event will be open for 1 hour 15 minutes after start
+  const eventDurationHours = 2; // Event will be open for 1 hour 15 minutes after start
   const handleTimerEnd = () => {
     setIsTimerExpired(true);
   };
